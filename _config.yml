@@ -1,74 +1,26 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: 啊哈！前端
+name: 吴哲的个人博客
 email: wuzhe_@aliyun.com
-description: >- # this means to ignore newlines until "baseurl:"
-  web前端技术博客，一直在打杂，从未被超越！
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://qdi5.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: wuzhe
-github_username: qdi5
-github_repo: qdi5.github.io
-# Build settings
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-# 添加分页
+author: wuzhe
+url: http://www.hifreud.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
+baseurl: ""
+description: Actually, less is more!
+meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/
 paginate: 10
-# 设置分页跳转的路径
-paginate_path: "/blog/page:num/"
-# 设置文章固定链接的格式
-permalink: /:year/:month/:day/:title:output_ext
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-defaults:
-  - scope:
-      path: "_posts/kindle" # an empty string here means all files in the project
-    values:
-      layout: "post"
-  - scope:
-      path: "_posts/google" # an empty string here means all files in the project
-    values:
-      layout: "post"
-# 配置valine评论插件的全局变量
-valine_comment:
-  enable: true
-# app_id
-  leancloud_appid: rLjpdbqSOjMoLe0P1OcmRDs2-gzGzoHsz
-# app_key
-  leancloud_appkey: PpQRgch4txM93rxHmgEuajh3
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: qdi5
+
+# Build settings
+markdown: kramdown
+
+baidu_analysis: a9939f5afa2f4b4206bddf1aba2861cc
+

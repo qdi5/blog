@@ -1,0 +1,14 @@
+I"<h2 id="实现原理">实现原理</h2>
+<p><strong>小球数组 balls = [{show: false},{show: false},{show: false},{show: false}]  <br />
+下落的小球数组 dropBalls = []</strong></p>
+<ol>
+  <li>小球只有飞入动画，没有离开时的飞回动画；因此，它是单向的<code class="language-plaintext highlighter-rouge">enter</code>动画，没有leave动画。</li>
+  <li>小球默认样式，设置为小球最终落地点的位置。</li>
+  <li>小球外层元素向下运动（缓动动画使用贝塞尔曲线 <code class="language-plaintext highlighter-rouge">cubic-bezier(0.49, -0.29, 0.75, 0.41)</code>），内层元素向左运动（缓动动画使用css3 transition属性内置的<code class="language-plaintext highlighter-rouge">linear</code>）。最终看到的效果，就是一个曲线运动。</li>
+  <li>使用数组定义一组小球，连续执行动画时，从这里获取未执行动画的小球，每获取一个，则存入正在下落的小球数组里。</li>
+  <li>使用vue transition组件自定义钩子函数实现动画效果；  <br />
+  5.1. <code class="language-plaintext highlighter-rouge">before-enter</code>；定义动画开始前，计算出小球的初始位置；并显示当前的小球，触发transition组件的动画机制；
+  5.2. <code class="language-plaintext highlighter-rouge">enter</code>；重置小球的初始位置；监听过渡动画的结束事件，执行enter钩子函数的done回调，表示动画执行完成；
+  5.3. <code class="language-plaintext highlighter-rouge">after-enter</code>；从下落中的小球数组中移除当前执行完动画的小球，并设置它的show为false（由于每个小球是一个引用对象，当前执行完动画的小球属性的更改也会在小球数组中表现出来）</li>
+</ol>
+:ET

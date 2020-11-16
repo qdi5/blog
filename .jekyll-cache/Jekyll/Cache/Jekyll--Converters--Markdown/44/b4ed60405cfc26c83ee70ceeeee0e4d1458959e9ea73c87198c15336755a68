@@ -1,0 +1,12 @@
+I"�<h2 id="name属性">name属性</h2>
+<p>transition组件的name属性，用于在过渡的时候，自动应用的class前缀名；transition在过渡的时候，一共有6个css的class名会用到，默认以v为前缀，分别是：</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">v</span><span class="o">-</span><span class="nx">enter</span>
+  <span class="nx">v</span><span class="o">-</span><span class="nx">enter</span><span class="o">-</span><span class="nx">active</span>
+  <span class="nx">v</span><span class="o">-</span><span class="nx">enter</span><span class="o">-</span><span class="nx">to</span>
+  <span class="nx">v</span><span class="o">-</span><span class="nx">leave</span>
+  <span class="nx">v</span><span class="o">-</span><span class="nx">leave</span><span class="o">-</span><span class="nx">active</span>
+  <span class="nx">v</span><span class="o">-</span><span class="nx">leave</span><span class="o">-</span><span class="nx">to</span>
+</code></pre></div></div>
+<p>一个Vue过渡的过程大概是这样的：  <br />
+在进入动画之前，vue会自动给元素添加<code class="language-plaintext highlighter-rouge">v-enter</code>、<code class="language-plaintext highlighter-rouge">v-enter-active</code>，一旦进入动画开始被应用，v-enter类就会被删除，<code class="language-plaintext highlighter-rouge">v-enter-to</code>类被加入进来，等到开始动画结束后，v-enter-acitve和v-enter-to这两个类就被同时删除了；离开动画类似，在离开动画之前，Vue会自动给元素添加<code class="language-plaintext highlighter-rouge">v-leave</code>和<code class="language-plaintext highlighter-rouge">v-leave-active</code>这两个类，一旦离开动画开始被应用，v-leave类就会被删除，<code class="language-plaintext highlighter-rouge">v-leave-to</code>类被加入进来，等到离开动画结束后，v-leave-active和v-leave-to这两个类就会被同时删除了。</p>
+:ET

@@ -1,37 +1,13 @@
-<style>
-  .container {
-    position: relative;
-  }
-  .ft-content {
-    height: 170px;
-    line-height: 170px;
-  }
-  .img {
-    float: right;
-    margin: 10px 0;
-  }
-  @media (max-width: 52em) {
-    .ft-content {
-      height: auto;
-      line-height: inherit;
-    }
-    .img {
-      float: left;
-    }
-  }
-</style>
-<div class="border-top-thin clearfix mt-2 mt-lg-4">
-  <div class="container mx-auto px-2 clearfix">
-    <p class="col-8 sm-width-full left py-2 mb-0 ft-content">
-      此项目由
-      <a class="text-accent" href="https://github.com/{{ site.github_username }}">
-        {{ site.github_username }}
-      </a>
-      维护，欢迎
-      <a class="text-accent" href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}">Star</a>，谢谢！
-      <a href="{{ site.url }}/feed.xml">RSS订阅</a>
-      
-    </p>
-    <img class="img" src="/assets/images/weixin_small.jpg" width="150" height="auto" alt="">
-  </div>
-</div>
+<footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2014-{{ site.time | date: '%Y' }} <a href="{{site.resume_site}}"><code>{{ site.author }}</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
+	</div>
+</footer>
+
+<script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/holder.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/lessismore.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/application.js' | prepend: site.baseurl }}"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
