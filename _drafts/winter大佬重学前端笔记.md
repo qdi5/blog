@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 ---
 
 ## 开篇词｜从今天起，重新理解前端

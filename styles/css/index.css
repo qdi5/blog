@@ -6520,8 +6520,10 @@ hr {
 }
 .docs-nav .container .navbar-brand {
   margin: 12px 0 0;
-  width: 100px;
+  width: 35px;
   padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .docs-nav .container .navbar-brand img {
   display: block;

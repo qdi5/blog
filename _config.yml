@@ -2,17 +2,17 @@
 name: 吴哲的个人博客
 email: wuzhe_@aliyun.com
 author: wuzhe
-url: http://www.hifreud.com
-resume_site: http://www.hifreud.com/Resume.io/
-github: https://github.com/luoyan35714/
+url: http://www.wuzhe.online
+resume_site: https://docs.google.com/document/d/1YbJwNQekZ6DfHfZS1TdAvWCdz80xoAAadR_6YAnWheg/edit?usp=sharing
+github: https://github.com/qdi5/
 baseurl: ""
-description: Actually, less is more!
-meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
-motto: It's our wits that make us men.
+description: 有朋自远方来，不亦乐乎!
+meta_description: 吴哲;个人博客;专注于Vue、Node、html、css、js(javascript)技术
+motto: 学而时习之，不亦说乎!
 banner: 学而不思则罔，思而不学则殆。
 
 #permalink: /:categories/:year/:month/:day/:title/
-permalink: /:year/:month/:day/
+permalink: /:year/:month/:day/:hour/:minute/:second
 paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
@@ -21,6 +21,13 @@ github_username: qdi5
 
 # Build settings
 markdown: kramdown
-
+# 百度统计
 baidu_analysis: a9939f5afa2f4b4206bddf1aba2861cc
+# 配置valine评论插件的全局变量
+valine_comment:
+  enable: true
+# app_id
+  leancloud_appid: rLjpdbqSOjMoLe0P1OcmRDs2-gzGzoHsz
+# app_key
+  leancloud_appkey: PpQRgch4txM93rxHmgEuajh3
 
