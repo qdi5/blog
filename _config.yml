@@ -10,7 +10,7 @@ description: 有朋自远方来，不亦乐乎!
 meta_description: 吴哲;个人博客;专注于Vue、Node、html、css、js(javascript)技术
 motto: 学而时习之，不亦说乎!
 banner: 学而不思则罔，思而不学则殆。
-
+cdn: http://img.qdi5.com/
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:hour/:minute/:second/:title
 paginate: 10
@@ -21,6 +21,11 @@ github_username: qdi5
 
 # Build settings
 markdown: kramdown
+defaults:
+  - scope:
+      path: "_posts/caishang" # an empty string here means all files in the project
+    values:
+      layout: "post"
 # 百度统计
 baidu_analysis: a9939f5afa2f4b4206bddf1aba2861cc
 # 配置valine评论插件的全局变量
