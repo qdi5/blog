@@ -1,5 +1,5 @@
 # Site settings
-name: 吴哲的个人博客
+name: AHAFE的个人博客
 email: wuzhe_@aliyun.com
 author: wuzhe
 url: http://www.wuzhe.online
@@ -11,7 +11,7 @@ meta_description: 吴哲;个人博客;专注于Vue、Node、html、css、js(java
 motto: 学而时习之，不亦说乎!
 banner: 学而不思则罔，思而不学则殆。
 cdn: http://img.qdi5.com/
-#permalink: /:categories/:year/:month/:day/:title/
+#permalink: /:year/:month/:day/:hour/:minute/:second/:title/
 permalink: /:year/:month/:day/:hour/:minute/:second/:title/
 paginate: 10
 
