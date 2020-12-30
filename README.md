@@ -64,9 +64,9 @@ jekyll server
 打开浏览器并输入URL`http://localhost:4000/`,回车。
 
 
-## 在本地启动jekyll站点
+## 在本地启动jekyll站点(可通过ip访问)
 ```ruby
-bundle exec jekyll serve
+bundle exec jekyll serve -w --host=0.0.0.0
 ```
 ### 学习笔记
 1. 以html,md,markdown结尾的文件，将会被作为一个页面存在，访问的时候，直接以根路径加上文件名访问，比如：contract.html,访问路径就是：https://qdi5.github.io/contract.html  
