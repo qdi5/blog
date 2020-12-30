@@ -1,0 +1,35 @@
+  {% include head.html %}
+  <body class="index">
+    <link rel="stylesheet" href="{{ '/assets/videojs/video-js.min.css' | prepend: site.baseurl }}">
+    {% include header.html %}
+    <div class="container" style="max-width: 848px">
+      <h1 class="post-title text-center">{{ page.title }}</h1>
+      <video
+      id="video"
+      class="video-js vjs-big-play-centered vjs-fluid"
+      controls
+      preload="auto"
+      width="848" 
+      height="480"
+      data-setup="{}"
+    >
+      <source src="{{ page.fileurl }}" type="video/mp4" />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank"
+          >supports HTML5 video</a
+        >
+      </p>
+    </video>
+    </div>
+    
+    <script src="{{ '/assets/videojs/video.min.js' | prepend: site.baseurl }}" ></script>
+    <script>
+      var player = videojs('video', { fluid: true }, function () {
+        console.log('Good to go!');
+        this.play(); // if you don't trust autoplay for some reason  
+      })
+    </script>
+  </body>
+</html>
