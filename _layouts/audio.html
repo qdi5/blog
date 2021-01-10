@@ -1,48 +1,25 @@
 {% include head.html %}
-
-  <link rel="stylesheet" href="{{ '/assets/audio/styles.css' | prepend: site.baseurl }}">
-</head>
-<body>
-  <!-- Top Info -->
-  <div id="title">
-    <span id="track"></span>
-    <div id="timer">0:00</div>
-    <div id="duration">0:00</div>
+<body class="index">
+  <link rel="stylesheet" href="{{ '/assets/audio/mediaelementplayer.min.css' | prepend: site.baseurl }}">
+  {% include header.html %}
+  <div class="container" style="max-width: 848px">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <audio src="{{ page.fileurl }}"></audio>
+    <div id="comments"></div>
+    {% include valine.html %}
   </div>
-
-  <!-- Controls -->
-  <div class="controlsOuter">
-    <div class="controlsInner">
-      <div id="loading"></div>
-      <div class="btn" id="playBtn"></div>
-      <div class="btn" id="pauseBtn"></div>
-      <div class="btn" id="prevBtn"></div>
-      <div class="btn" id="nextBtn"></div>
-    </div>
-    <div class="btn" id="playlistBtn"></div>
-    <div class="btn" id="volumeBtn"></div>
-  </div>
-
-  <!-- Progress -->
-  <div id="waveform"></div>
-  <div id="bar"></div>
-  <div id="progress"></div>
-
-  <!-- Playlist -->
-  <div id="playlist">
-    <div id="list"></div>
-  </div>
-
-  <!-- Volume -->
-  <div id="volume" class="fadeout">
-    <div id="barFull" class="bar"></div>
-    <div id="barEmpty" class="bar"></div>
-    <div id="sliderBtn"></div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="{{ '/assets/audio/howler.core.js' | prepend: site.baseurl }}"></script>
-  <script src="{{ '/assets/audio/siriwave.js' | prepend: site.baseurl }}"></script>
-  <script src="{{ '/assets/audio/player.js' | prepend: site.baseurl }}"></script>
+  
+  <script src="{{ 'jquery.min.js' | prepend: site.cdn }}"></script>
+  <script src="{{ '/assets/audio/mediaelement-and-player.min.js' | prepend: site.baseurl }}"></script>
+  <script>
+    $('video, audio').mediaelementplayer({
+	// Do not forget to put a final slash (/)
+	pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
+	// this will allow the CDN to use Flash without restrictions
+	// (by default, this is set as `sameDomain`)
+	shimScriptAccess: 'always'
+	// more configuration
+});
+  </script>
 </body>
 </html>

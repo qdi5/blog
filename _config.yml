@@ -23,8 +23,8 @@ github_username: qdi5
 markdown: kramdown
 defaults:
   - scope:
-      path: "_posts/sevenminutes"
-      path: "_posts/caishang" # an empty string here means all files in the project
+      path: "_posts/xuexi"
+      path: "_posts/licai" # an empty string here means all files in the project
     values:
       layout: "post"
 # 百度统计
