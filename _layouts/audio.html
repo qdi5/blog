@@ -9,7 +9,7 @@
   {% include header.html %}
   <div class="container" style="max-width: 848px">
     <h1 class="post-title">{{ page.title }}</h1>
-    <audio src="{{ page.fileurl }}" id="audio" width="100%"></audio>
+    <audio src="{{ page.fileurl | prepend: site.cdn }}" id="audio" width="100%"></audio>
     <div id="comments"></div>
     {% include valine.html %}
   </div>
@@ -19,14 +19,8 @@
   <script>
     $('video, audio').mediaelementplayer({
       id: 'audioMdeia',
-      width: '100%',
-      // Do not forget to put a final slash (/)
-      pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
-      // this will allow the CDN to use Flash without restrictions
-      // (by default, this is set as `sameDomain`)
-      shimScriptAccess: 'always'
-      // more configuration
-});
+      width: '100%'
+    });
   </script>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
